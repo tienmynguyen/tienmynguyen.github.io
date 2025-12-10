@@ -99,7 +99,8 @@ h1, h2, h3, h4, h5, h6 {
   transition: all ease-in-out 0.3s;
   overflow-y: auto;
   z-index: 997;
-  min-width: 200px;
+  max-width: 160px;
+  min-width: 160px;
   border-right: 1px solid #333;
 }
 
