@@ -4,6 +4,15 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script>
+      (function () {
+        var path = window.location.pathname;
+        var hasFileExtension = /\/[^/]+\.[^/]+$/.test(path);
+        if (!hasFileExtension && !path.endsWith('/')) {
+          window.location.replace(window.location.origin + path + '/' + window.location.search + window.location.hash);
+        }
+      })();
+    </script>
     <title>Nguyen Tien My | Game Developer</title>
     <meta content="Portfolio of Nguyen Tien My - Unity Game Developer" name="description" />
     <meta content="Game Developer, Unity, C#, Portfolio" name="keywords" />
