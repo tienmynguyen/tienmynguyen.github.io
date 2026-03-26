@@ -32,23 +32,34 @@
         <nav id="navmenu" class="navmenu">
             <ul>
                 <li>
-                    <a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a>
+                    <a href="#hero" class="active"><i class="bi bi-house navicon"></i><span id="nav-home">Home</span></a>
                 </li>
                 <li>
-                    <a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a>
+                    <a href="#about"><i class="bi bi-person navicon"></i><span id="nav-about">About</span></a>
                 </li>
                 <li>
-                    <a href="#skills"><i class="bi bi-code-slash navicon"></i><span>Skills</span></a>
+                    <a href="#skills"><i class="bi bi-code-slash navicon"></i><span id="nav-skills">Skills</span></a>
                 </li>
                 <li>
-                    <a href="#portfolio"><i class="bi bi-controller navicon"></i><span>Projects</span></a>
+                    <a href="#achievements"><i class="bi bi-trophy navicon"></i><span id="nav-achievements">Achievements</span></a>
                 </li>
                 <li>
-                    <a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a>
+                    <a href="#timeline"><i class="bi bi-clock-history navicon"></i><span id="nav-timeline">Timeline</span></a>
+                </li>
+                <li>
+                    <a href="#portfolio"><i class="bi bi-controller navicon"></i><span id="nav-projects">Projects</span></a>
+                </li>
+                <li>
+                    <a href="#contact"><i class="bi bi-envelope navicon"></i><span id="nav-contact">Contact</span></a>
                 </li>
             </ul>
         </nav>
     </header>
+    <div class="language-switcher" id="language-switcher">
+        <button type="button" class="lang-btn active" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="ja">日本語</button>
+        <button type="button" class="lang-btn" data-lang="vi">VI</button>
+    </div>
 
     <main class="main">
        <section id="hero" class="hero section light-background">
@@ -57,7 +68,7 @@
             <div class="col-lg-9 text-center">
                 <h2>NGUYEN TIEN MY</h2>
                 <p>
-                    I'm a
+                    <span id="hero-prefix">I'm a</span>
                     <span class="typed" data-typed-items="Unity Game Developer, Full Stack Web Developer, React Native Expert, C# & PHP Programmer"></span>
                     <span class="typed-cursor typed-cursor--blink" aria-hidden="true">|</span>
                 </p>
@@ -72,8 +83,8 @@
 </section>
        <section id="about" class="about section">
     <div class="container section-title" data-aos="fade-up">
-        <h2>About Me</h2>
-        <p>
+        <h2 id="about-title">About Me</h2>
+        <p id="about-subtitle">
             A versatile Software Engineer capable of building immersive 3D worlds and robust web applications.
         </p>
     </div>
@@ -83,29 +94,29 @@
                 <img src="assets/img/profile.png" class="img-fluid" alt="Profile" style="border-radius: 15px;" />
             </div>
             <div class="col-lg-8 content">
-                <h3>Unity Game Developer <span style="color:var(--accent-color)">//</span> Full Stack Web Developer</h3>
+                <h3 id="about-role">Unity Game Developer <span style="color:var(--accent-color)">//</span> Full Stack Web Developer</h3>
                 
-                <p class="fst-italic py-3">
+                <p id="about-intro" class="fst-italic py-3">
                     As a final-year IT student, I define myself as a multi-disciplinary developer. I possess the logic to build complex backend systems in PHP/SQL and the creativity to craft engaging gameplay experiences in Unity/C#.
                 </p>
                 <div class="row">
                     <div class="col-lg-6">
                         <ul>
-                            <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>Jan 1, 2004</span></li>
-                            <li><i class="bi bi-chevron-right"></i> <strong>Github:</strong> <span>github.com/tienmynguyen</span></li>
-                            <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>0364168838</span></li>
-                            <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Danang, Vietnam</span></li>
+                            <li><i class="bi bi-chevron-right"></i> <strong id="about-label-birthday">Birthday:</strong> <span>Jan 1, 2004</span></li>
+                            <li><i class="bi bi-chevron-right"></i> <strong id="about-label-github">Github:</strong> <span>github.com/tienmynguyen</span></li>
+                            <li><i class="bi bi-chevron-right"></i> <strong id="about-label-phone">Phone:</strong> <span>0364168838</span></li>
+                            <li><i class="bi bi-chevron-right"></i> <strong id="about-label-city">City:</strong> <span>Danang, Vietnam</span></li>
                         </ul>
                     </div>
                     <div class="col-lg-6">
                         <ul>
-                            <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>21</span></li>
-                            <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Final-year Student</span></li>
-                            <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>mytom2401@gmail.com</span></li>
+                            <li><i class="bi bi-chevron-right"></i> <strong id="about-label-age">Age:</strong> <span>21</span></li>
+                            <li><i class="bi bi-chevron-right"></i> <strong id="about-label-degree">Degree:</strong> <span id="about-degree-value">Final-year Student</span></li>
+                            <li><i class="bi bi-chevron-right"></i> <strong id="about-label-email">Email:</strong> <span>mytom2401@gmail.com</span></li>
                         </ul>
                     </div>
                 </div>
-                <p class="py-3">
+                <p id="about-outro" class="py-3">
                     Whether it's optimizing a rendering pipeline for a game or designing a scalable REST API for a mobile app, I am committed to delivering high-performance and user-centric products.
                 </p>
             </div>
@@ -114,75 +125,257 @@
 </section>
        <section id="skills" class="skills section">
     <div class="container section-title" data-aos="fade-up">
-        <h2>Technical Skills</h2>
-        <p>My dual expertise in Game Development and Software Engineering</p>
+        <h2 id="skills-title">Technical Skills</h2>
+        <p id="skills-subtitle">My dual expertise in Game Development and Software Engineering</p>
     </div>
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row skills-content skills-animation">
             
             <div class="col-lg-6">
-                <h4 style="margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 10px;">GAME DEVELOPMENT</h4>
+                <div class="skills-group">
+                <div class="skills-head">
+                    <span class="skills-icon"><i class="bi bi-controller"></i></span>
+                    <h4 id="skills-group-game">Game Development</h4>
+                </div>
                 
                 <div class="progress">
-                    <span class="skill"><span>Unity Engine (2D/3D)</span> <i class="val">80%</i></span>
+                    <span class="skill"><span id="skills-game-1">Unity Engine (2D/3D)</span> <i class="val">80%</i></span>
                     <div class="progress-bar-wrap">
                         <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
 
                 <div class="progress">
-                    <span class="skill"><span>C# Programming</span> <i class="val">90%</i></span>
+                    <span class="skill"><span id="skills-game-2">C# Programming</span> <i class="val">90%</i></span>
                     <div class="progress-bar-wrap">
                         <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
 
                 <div class="progress">
-                    <span class="skill"><span>Game Logic & Physics</span> <i class="val">75%</i></span>
+                    <span class="skill"><span id="skills-game-3">Game Logic & Physics</span> <i class="val">75%</i></span>
                     <div class="progress-bar-wrap">
                         <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
+                </div>
             </div>
 
             <div class="col-lg-6">
-                <h4 style="margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 10px;">WEB & APP STACK</h4>
+                <div class="skills-group">
+                <div class="skills-head">
+                    <span class="skills-icon"><i class="bi bi-code-slash"></i></span>
+                    <h4 id="skills-group-web">Web & App Stack</h4>
+                </div>
 
                 <div class="progress">
-                    <span class="skill"><span>React Native / JavaScript</span> <i class="val">80%</i></span>
+                    <span class="skill"><span id="skills-web-1">React Native / JavaScript</span> <i class="val">80%</i></span>
                     <div class="progress-bar-wrap">
                         <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
 
                 <div class="progress">
-                    <span class="skill"><span>PHP & MySQL (Backend)</span> <i class="val">85%</i></span>
+                    <span class="skill"><span id="skills-web-2">PHP & MySQL (Backend)</span> <i class="val">85%</i></span>
                     <div class="progress-bar-wrap">
                         <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
 
                 <div class="progress">
-                    <span class="skill"><span>Git / Firebase / Tools</span> <i class="val">90%</i></span>
+                    <span class="skill"><span id="skills-web-3">Git / Firebase / Tools</span> <i class="val">90%</i></span>
                     <div class="progress-bar-wrap">
                         <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
+                </div>
                 </div>
             </div>
             
         </div>
     </div>
 </section>
+       <section id="achievements" class="achievements section">
+    <div class="container section-title" data-aos="fade-up">
+        <h2 id="achievements-title">Achievements</h2>
+        <p id="achievements-subtitle">Key milestones in my learning and competition journey</p>
+    </div>
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="achievement-card h-100">
+                    <div class="achievement-icon"><i class="bi bi-award-fill"></i></div>
+                    <h3 id="ach-1-title">3rd Prize - Best Web Design 2022</h3>
+                    <p id="ach-1-desc">Won third place at Best Web Design 2022 with a practical and impactful web product.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="achievement-card h-100">
+                    <div class="achievement-icon"><i class="bi bi-stars"></i></div>
+                    <h3 id="ach-2-title">Most Impressive Website Award</h3>
+                    <p id="ach-2-desc">Received the Most Impressive Website award at Best Web Design 2022.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="achievement-card h-100">
+                    <div class="achievement-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+                    <h3 id="ach-3-title">Encouragement Prize - Tetote Hackathon</h3>
+                    <p id="ach-3-desc">Won an encouragement prize at Tetote Hackathon for creativity and teamwork.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+       <section id="timeline" class="timeline section">
+    <div class="container section-title" data-aos="fade-up">
+        <h2 id="timeline-title">Timeline</h2>
+        <p id="timeline-subtitle">A timeline of projects, activities, experience, and skills</p>
+    </div>
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="timeline-list">
+            <div class="timeline-item">
+                <span class="timeline-year">2020</span>
+                <div class="timeline-content">
+                    <h3 id="tl-1-title">First Prize - Ha Long Youth Informatics Competition</h3>
+                    <p id="tl-1-desc">Won first prize at the Ha Long specialized youth informatics competition.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <span class="timeline-year">2021</span>
+                <div class="timeline-content">
+                    <h3 id="tl-2-title">Second Prize - Town-level Informatics Competition</h3>
+                    <p id="tl-2-desc">Won second prize in the town-level informatics competition.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <span class="timeline-year">10/2022</span>
+                <div class="timeline-content">
+                    <h3 id="tl-3-title">Started at VKU</h3>
+                    <p id="tl-3-desc">Enrolled at Vietnam - Korea University of Information and Communication Technology (VKU).</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <span class="timeline-year">12/2022</span>
+                <div class="timeline-content">
+                    <h3 id="tl-4-title">Joined Best Web Design 2022</h3>
+                    <p id="tl-4-desc">Participated in the Best Web Design 2022 competition.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <span class="timeline-year">6/2023</span>
+                <div class="timeline-content">
+                    <h3 id="tl-5-title">Completed Obooks Reading Website</h3>
+                    <p id="tl-5-desc">Completed the personal reading website project: <a href="#project-obook">Obooks</a>.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <span class="timeline-year">7/2023</span>
+                <div class="timeline-content">
+                    <h3 id="tl-6-title">Most Impressive Website Award</h3>
+                    <p id="tl-6-desc">Won the Most Impressive Website Award at Best Web Design 2022.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <span class="timeline-year">8/2023</span>
+                <div class="timeline-content">
+                    <h3 id="tl-7-title">3rd Prize - Best Web Design 2022</h3>
+                    <p id="tl-7-desc">Won third prize at Best Web Design 2022.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <span class="timeline-year">9/2023</span>
+                <div class="timeline-content">
+                    <h3 id="tl-8-title">Nix Vietnam-Japan Bridge Engineer Training</h3>
+                    <p id="tl-8-desc">Joined the Vietnam-Japan bridge engineer training program organized by Nix.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <span class="timeline-year">12/2023</span>
+                <div class="timeline-content">
+                    <h3 id="tl-9-title">Completed HiveHub App</h3>
+                    <p id="tl-9-desc">Completed the personal project <a href="#project-hivehub">HiveHub</a>.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <span class="timeline-year">5/2024</span>
+                <div class="timeline-content">
+                    <h3 id="tl-10-title">TETOTE Hackathon - 4th Prize</h3>
+                    <p id="tl-10-desc">Participated in TETOTE Hackathon and won 4th prize.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <span class="timeline-year">9/2024</span>
+                <div class="timeline-content">
+                    <h3 id="tl-11-title">Participated in Robocar Competition</h3>
+                    <p id="tl-11-desc">Joined the Robocar competition.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <span class="timeline-year">12/2024</span>
+                <div class="timeline-content">
+                    <h3 id="tl-12-title">Completed AI Traffic Violation Project</h3>
+                    <p id="tl-12-desc">Completed personal AI project for traffic violation recognition: <a href="#project-tego-ai">Tego AI</a>.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <span class="timeline-year">4/2025</span>
+                <div class="timeline-content">
+                    <h3 id="tl-13-title">Completed Bang Bang Mi Game</h3>
+                    <p id="tl-13-desc">Completed personal game project <a href="#project-bang-bang-mi">Bang Bang Mi</a>.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <span class="timeline-year">5/2025</span>
+                <div class="timeline-content">
+                    <h3 id="tl-14-title">Internship at Mynavi Vietnam</h3>
+                    <p id="tl-14-desc">Started internship program at Mynavi Vietnam.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <span class="timeline-year">8/2025</span>
+                <div class="timeline-content">
+                    <h3 id="tl-15-title">Completed Internship at Mynavi Vietnam</h3>
+                    <p id="tl-15-desc">Successfully completed the internship program at Mynavi Vietnam.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <span class="timeline-year">12/2025</span>
+                <div class="timeline-content">
+                    <h3 id="tl-16-title">Completed Kickback Escape Game</h3>
+                    <p id="tl-16-desc">Completed personal game project <a href="#project-kickback-escape">Kickback Escape</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
        <section id="portfolio" class="portfolio section">
     <div class="container section-title" data-aos="fade-up">
-        <h2>Featured Projects</h2>
-        <p>Explore my journey through Game Development & Software Engineering</p>
+        <h2 id="projects-title">Featured Projects</h2>
+        <p id="projects-subtitle">Explore my journey through Game Development & Software Engineering</p>
     </div>
 
     <div class="container">
 
-        <div class="row project-item align-items-center" data-aos="fade-up">
+        <div id="project-kickback-escape" class="row project-item align-items-center" data-aos="fade-up">
             <div class="col-lg-7 project-img">
                 <div class="img-wrapper">
                     <img src="assets/img/kickbackescape.png" class="img-fluid" alt="Kickback Escape">
@@ -191,23 +384,23 @@
             <div class="col-lg-5 project-content">
                 <h3>Kickback Escape</h3>
                 <span class="tech-stack">Unity &bull; C# &bull; RPG</span>
-                <p>
+                <p id="project-1-desc">
                     An adventure role-playing game where players overcome obstacles using a unique mechanic: 
                     <strong>Weapon Recoil Movement</strong>. Instead of jumping, you shoot to propel yourself!
                 </p>
                 <ul>
-                    <li><i class="bi bi-check-circle-fill"></i> Custom Physics-based movement system.</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Dynamic level design and obstacles.</li>
+                    <li id="project-1-feature-1"><i class="bi bi-check-circle-fill"></i> Custom Physics-based movement system.</li>
+                    <li id="project-1-feature-2"><i class="bi bi-check-circle-fill"></i> Dynamic level design and obstacles.</li>
                 </ul>
                 <div class="project-links">
-                    <a href="https://github.com/tienmynguyen/Kickback-Escape" target="_blank" class="btn-visit">
-                        <i class="bi bi-github"></i> View Code or play demo
+                    <a id="project-1-btn" href="https://github.com/tienmynguyen/Kickback-Escape" target="_blank" class="btn-visit">
+                        <i class="bi bi-github"></i> View Code or Play Demo
                     </a>
                 </div>
                 
             </div>
         </div>
-        <div class="row project-item align-items-center" data-aos="fade-up">
+        <div id="project-bang-bang-mi" class="row project-item align-items-center" data-aos="fade-up">
             <div class="col-lg-7 order-lg-2 project-img">
                 <div class="img-wrapper">
                     <img src="assets/img/gun.png" class="img-fluid" alt="Bang Bang Mi">
@@ -216,22 +409,22 @@
             <div class="col-lg-5 order-lg-1 project-content">
                 <h3>Bang Bang Mi</h3>
                 <span class="tech-stack">Unity &bull; Action &bull; Boss Fight</span>
-                <p>
+                <p id="project-2-desc">
                     A fast-paced shooting RPG. Collect energy to summon powerful Bosses. 
                     Upgrade your skills, dodge bullet hells, and claim victory.
                 </p>
                 <ul>
-                    <li><i class="bi bi-check-circle-fill"></i> Wave-based enemy spawning system.</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Skill upgrade & inventory system.</li>
+                    <li id="project-2-feature-1"><i class="bi bi-check-circle-fill"></i> Wave-based enemy spawning system.</li>
+                    <li id="project-2-feature-2"><i class="bi bi-check-circle-fill"></i> Skill upgrade & inventory system.</li>
                 </ul>
                 <div class="project-links">
-                    <a href="https://github.com/tienmynguyen/GunGameUnity" target="_blank" class="btn-visit">
-                        <i class="bi bi-github"></i> View Code or play demo
+                    <a id="project-2-btn" href="https://github.com/tienmynguyen/GunGameUnity" target="_blank" class="btn-visit">
+                        <i class="bi bi-github"></i> View Code or Play Demo
                     </a>
                 </div>
             </div>
         </div>
-        <div class="row project-item align-items-center" data-aos="fade-up">
+        <div id="project-hivehub" class="row project-item align-items-center" data-aos="fade-up">
             <div class="col-lg-7 project-img">
                 <div class="img-wrapper">
                     <img src="assets/img/task.png" class="img-fluid" alt="HiveHub">
@@ -240,38 +433,38 @@
             <div class="col-lg-5 project-content">
                 <h3>HiveHub</h3>
                 <span class="tech-stack">React Native &bull; Firebase &bull; Scrum</span>
-                <p>
+                <p id="project-3-desc">
                     A comprehensive mobile application for project management based on the Scrum framework. 
                     Helps teams track tasks, sprints, and improve productivity.
                 </p>
                 <div class="project-links">
-                    <a href="https://github.com/tienmynguyen/HiveHub" target="_blank" class="btn-visit">
+                    <a id="project-3-btn" href="https://github.com/tienmynguyen/HiveHub" target="_blank" class="btn-visit">
                         <i class="bi bi-github"></i> View Code
                     </a>
                 </div>
             </div>
         </div>
-        <div class="row project-item align-items-center" data-aos="fade-up">
+        <div id="project-obook" class="row project-item align-items-center" data-aos="fade-up">
             <div class="col-lg-7 order-lg-2 project-img">
                 <div class="img-wrapper">
-                    <img src="assets/img/obook.png" class="img-fluid" alt="Obook">
+                    <img src="assets/img/obook.png" class="img-fluid" alt="Obooks">
                 </div>
             </div>
             <div class="col-lg-5 order-lg-1 project-content">
-                <h3>Obook</h3>
+                <h3>Obooks</h3>
                 <span class="tech-stack">PHP &bull; Web App &bull; MySQL</span>
-                <p>
+                <p id="project-4-desc">
                     A web platform for reading lovers. Supports both Audiobooks and E-books. 
                     Features include personal libraries, reading history tracking, and a community forum.
                 </p>
                 <div class="project-links">
-                    <a href="https://github.com/tienmynguyen/obookpromax" target="_blank" class="btn-visit">
+                    <a id="project-4-btn" href="https://github.com/tienmynguyen/obookpromax" target="_blank" class="btn-visit">
                         <i class="bi bi-github"></i> View Code
                     </a>
                 </div>
             </div>
         </div>
-        <div class="row project-item align-items-center" data-aos="fade-up">
+        <div id="project-tego-ai" class="row project-item align-items-center" data-aos="fade-up">
             <div class="col-lg-7 project-img">
                 <div class="img-wrapper">
                     <img src="assets/img/aaa.png" class="img-fluid" alt="Tego">
@@ -280,12 +473,12 @@
             <div class="col-lg-5 project-content">
                 <h3>Tego AI</h3>
                 <span class="tech-stack">Python &bull; AI &bull; Computer Vision</span>
-                <p>
+                <p id="project-5-desc">
                     An intelligent application for traffic violation recognition. 
                     Uses machine learning models to detect and analyze traffic signs and violations in real-time.
                 </p>
                 <div class="project-links">
-                    <a href="https://github.com/tienmynguyen/AIsignlang" target="_blank" class="btn-visit">
+                    <a id="project-5-btn" href="https://github.com/tienmynguyen/AIsignlang" target="_blank" class="btn-visit">
                         <i class="bi bi-github"></i> View Code
                     </a>
                 </div>
@@ -295,8 +488,8 @@
 </section>
         <section id="contact" class="contact section">
             <div class="container section-title" data-aos="fade-up">
-                <h2>Contact</h2>
-                <p>Let's work together!</p>
+                <h2 id="contact-title">Contact</h2>
+                <p id="contact-subtitle">Let's work together!</p>
             </div>
 
             <div class="container" data-aos="fade" data-aos-delay="100">
@@ -305,7 +498,7 @@
                         <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
                             <i class="bi bi-geo-alt flex-shrink-0"></i>
                             <div>
-                                <h3>Address</h3>
+                                <h3 id="contact-address-title">Address</h3>
                                 <p>Hoa Quy, Ngu Hanh Son, Da Nang</p>
                             </div>
                         </div>
@@ -313,7 +506,7 @@
                         <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
                             <i class="bi bi-telephone flex-shrink-0"></i>
                             <div>
-                                <h3>Call</h3>
+                                <h3 id="contact-call-title">Call</h3>
                                 <p>0364168838</p>
                             </div>
                         </div>
@@ -321,7 +514,7 @@
                         <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
                             <i class="bi bi-envelope flex-shrink-0"></i>
                             <div>
-                                <h3>Email</h3>
+                                <h3 id="contact-email-title">Email</h3>
                                 <p>mytom2401@gmail.com</p>
                             </div>
                         </div>
@@ -331,22 +524,22 @@
                         <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
                             <div class="row gy-4">
                                 <div class="col-md-6">
-                                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="" />
+                                    <input id="contact-name-input" type="text" name="name" class="form-control" placeholder="Your Name" required="" />
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="" />
+                                    <input id="contact-email-input" type="email" class="form-control" name="email" placeholder="Your Email" required="" />
                                 </div>
                                 <div class="col-md-12">
-                                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="" />
+                                    <input id="contact-subject-input" type="text" class="form-control" name="subject" placeholder="Subject" required="" />
                                 </div>
                                 <div class="col-md-12">
-                                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                                    <textarea id="contact-message-input" class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
                                 </div>
                                 <div class="col-md-12 text-center">
-                                    <div class="loading">Loading</div>
+                                    <div id="contact-loading" class="loading">Loading</div>
                                     <div class="error-message"></div>
-                                    <div class="sent-message">Your message has been sent. Thank you!</div>
-                                    <button type="submit">Send Message</button>
+                                    <div id="contact-sent" class="sent-message">Your message has been sent. Thank you!</div>
+                                    <button id="contact-submit" type="submit">Send Message</button>
                                 </div>
                             </div>
                         </form>
@@ -364,8 +557,8 @@
                 <a href="https://github.com/tienmynguyen"><i class="bi bi-github"></i></a>
             </div>
             <div class="copyright">
-                <span>&copy; Copyright</span> <strong class="px-1 sitename">Nguyen Tien My</strong>
-                <span>All Rights Reserved</span>
+                <span id="footer-copyright">&copy; Copyright</span> <strong class="px-1 sitename">Nguyen Tien My</strong>
+                <span id="footer-rights">All Rights Reserved</span>
             </div>
         </div>
     </footer>
@@ -387,22 +580,7 @@
 
     <script src="assets/js/main.js"></script>
     
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const selectTyped = document.querySelector('.typed');
-        if (selectTyped) {
-          let typed_strings = selectTyped.getAttribute('data-typed-items');
-          typed_strings = typed_strings.split(',');
-          new Typed('.typed', {
-            strings: typed_strings,
-            loop: true,
-            typeSpeed: 100,
-            backSpeed: 50,
-            backDelay: 2000
-          });
-        }
-      });
-    </script>
+    <script src="assets/js/i18n.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.net.min.js"></script>
 

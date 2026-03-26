@@ -92,18 +92,35 @@
   /**
    * Init typed.js
    */
-  const selectTyped = document.querySelector('.typed');
-  if (selectTyped) {
-    let typed_strings = selectTyped.getAttribute('data-typed-items');
-    typed_strings = typed_strings.split(',');
-    new Typed('.typed', {
-      strings: typed_strings,
+  window.portfolioTypedInstance = null;
+  window.initPortfolioTyped = function(overrideStrings) {
+    const selectTyped = document.querySelector('.typed');
+    if (!selectTyped) return;
+
+    const typedCursor = document.querySelector('.typed-cursor');
+    if (window.portfolioTypedInstance) {
+      window.portfolioTypedInstance.destroy();
+      window.portfolioTypedInstance = null;
+    }
+    if (typedCursor) {
+      typedCursor.remove();
+    }
+
+    let typedStrings = overrideStrings;
+    if (!Array.isArray(typedStrings)) {
+      typedStrings = selectTyped.getAttribute('data-typed-items').split(',');
+    }
+
+    window.portfolioTypedInstance = new Typed('.typed', {
+      strings: typedStrings,
       loop: true,
       typeSpeed: 100,
       backSpeed: 50,
       backDelay: 2000
     });
-  }
+  };
+
+  window.initPortfolioTyped();
 
   /**
    * Initiate Pure Counter
