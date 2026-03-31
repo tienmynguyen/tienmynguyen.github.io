@@ -413,6 +413,38 @@ section, .section {
   border-color: var(--accent-color);
 }
 
+.hero-cv {
+  margin-top: 26px;
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hero-cv #hero-cv-label {
+  color: var(--muted-color);
+  font-weight: 600;
+}
+
+.hero-cv .cv-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(102, 252, 241, 0.5);
+  color: var(--accent-color);
+  font-size: 12px;
+  font-family: var(--nav-font);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.hero-cv .cv-btn.is-disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
@@ -452,6 +484,68 @@ section, .section {
 
 .about .py-3 {
   color: #c0c8cf;
+}
+
+/*--------------------------------------------------------------
+# Experience Section
+--------------------------------------------------------------*/
+.experience-card {
+  background: linear-gradient(180deg, rgba(36, 48, 61, 0.7), rgba(20, 28, 38, 0.64));
+  border: 1px solid rgba(102, 252, 241, 0.2);
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.25s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(102, 252, 241, 0.55);
+  box-shadow: 0 12px 28px rgba(7, 10, 14, 0.44), 0 0 18px rgba(102, 252, 241, 0.12);
+}
+
+.experience-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.experience-head h3 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.experience-head span {
+  color: var(--accent-color);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.experience-card h4 {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.experience-card p {
+  color: #d4d4d4;
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+
+.experience-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.experience-tags span {
+  font-size: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  padding: 5px 10px;
 }
 
 /*--------------------------------------------------------------
@@ -991,12 +1085,19 @@ section, .section {
 }
 
 .project-item {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
+    grid-template-areas:
+      "media side"
+      "desc side";
+    gap: 18px;
     margin-bottom: 76px;
     padding: 30px;
     background: linear-gradient(180deg, rgba(36, 48, 61, 0.5), rgba(20, 28, 38, 0.5));
     border-radius: 20px;
     border: 1px solid rgba(102, 252, 241, 0.16);
     transition: all 0.3s ease;
+    align-items: stretch !important;
 }
 
 .project-item:hover {
@@ -1006,16 +1107,41 @@ section, .section {
 }
 
 /* Ảnh Dự Án */
+.project-img {
+    margin-bottom: 0;
+    grid-area: media;
+}
+
+.project-description {
+    grid-area: desc;
+    padding: 4px 20px 20px 0;
+}
+
+.project-side {
+    grid-area: side;
+    border: 1px solid rgba(102, 252, 241, 0.2);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
 .project-img .img-wrapper {
     overflow: hidden;
     border-radius: 15px;
     border: 2px solid #333;
     position: relative;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
 }
 
 .project-img img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: transform 0.5s ease;
 }
 
@@ -1024,7 +1150,8 @@ section, .section {
     inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    background: #000;
     opacity: 0;
     transition: opacity 0.25s ease;
     pointer-events: none;
@@ -1043,11 +1170,7 @@ section, .section {
 }
 
 /* Nội Dung Dự Án */
-.project-content {
-    padding: 20px;
-}
-
-.project-content h3 {
+.project-description h3 {
     font-size: clamp(26px, 2.8vw, 34px);
     font-weight: 800;
     color: var(--accent-color);
@@ -1056,7 +1179,7 @@ section, .section {
     letter-spacing: 1px;
 }
 
-.project-content .tech-stack {
+.project-description .tech-stack {
     display: inline-block;
     font-family: var(--nav-font);
     font-size: 14px;
@@ -1068,29 +1191,52 @@ section, .section {
     border: 1px solid rgba(255,255,255,0.2);
 }
 
-.project-content p {
+.project-description p {
     font-size: 16px;
     line-height: 1.75;
     color: #d1d1d1;
     margin-bottom: 20px;
 }
 
-.project-content ul {
+.project-description ul {
     list-style: none;
     padding: 0;
     margin-bottom: 25px;
 }
 
-.project-content ul li {
+.project-description ul li {
     margin-bottom: 10px;
     display: flex;
     align-items: center;
 }
 
-.project-content ul i {
+.project-description ul i {
     color: var(--accent-color);
     margin-right: 10px;
     font-size: 18px;
+}
+
+.case-study-snapshot {
+    margin-bottom: 18px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+
+.case-study-snapshot h4 {
+    margin: 0 0 10px;
+    color: var(--accent-color);
+    font-size: 16px;
+}
+
+.case-study-snapshot ul {
+    margin: 0;
+}
+
+.case-study-snapshot ul li {
+    margin-bottom: 8px;
+    color: #d9d9d9;
+    align-items: flex-start;
 }
 
 /* Nút Link */
@@ -1106,6 +1252,15 @@ section, .section {
     text-transform: uppercase;
     transition: all 0.25s ease;
     text-decoration: none;
+}
+
+.project-links {
+    margin-top: 12px;
+}
+
+.project-side .project-links {
+    margin-top: auto;
+    padding-top: 8px;
 }
 
 .project-links .btn-visit i {
@@ -1149,13 +1304,38 @@ section, .section {
         padding: 22px 20px 16px;
     }
 
+    .experience-head {
+        flex-direction: column;
+    }
+
     .project-item {
         text-align: center;
         margin-bottom: 60px;
     }
     
-    .project-content {
-        padding-top: 30px;
+    .project-item {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "media"
+          "desc"
+          "side";
+    }
+
+    .project-img {
+        margin-bottom: 18px;
+    }
+
+    .project-description {
+        padding: 0;
+    }
+
+    .project-side {
+        padding: 14px;
+    }
+
+    .project-img .img-wrapper {
+        min-height: 260px;
     }
     
     .project-content ul li {

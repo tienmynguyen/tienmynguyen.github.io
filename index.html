@@ -41,6 +41,9 @@
                     <a href="#skills"><i class="bi bi-code-slash navicon"></i><span id="nav-skills">Skills</span></a>
                 </li>
                 <li>
+                    <a href="#experience"><i class="bi bi-briefcase navicon"></i><span id="nav-experience">Experience</span></a>
+                </li>
+                <li>
                     <a href="#achievements"><i class="bi bi-trophy navicon"></i><span id="nav-achievements">Achievements</span></a>
                 </li>
                 <li>
@@ -76,6 +79,12 @@
                     <a href="https://github.com/tienmynguyen" target="_blank"><i class="bi bi-github"></i></a>
                     <a href="https://www.facebook.com/nguyen.tien.my.230614/" target="_blank"><i class="bi bi-facebook"></i></a>
                     <a href="mailto:mytom2401@gmail.com"><i class="bi bi-envelope"></i></a>
+                </div>
+                <div class="hero-cv">
+                    <span id="hero-cv-label">Resume:</span>
+                    <a id="hero-cv-btn-en" class="cv-btn is-disabled" href="#">EN PDF</a>
+                    <a id="hero-cv-btn-ja" class="cv-btn is-disabled" href="#">JP PDF</a>
+                    <a id="hero-cv-btn-vi" class="cv-btn is-disabled" href="#">VI PDF</a>
                 </div>
             </div>
         </div>
@@ -192,6 +201,46 @@
                 </div>
             </div>
             
+        </div>
+    </div>
+</section>
+       <section id="experience" class="experience section">
+    <div class="container section-title" data-aos="fade-up">
+        <h2 id="experience-title">Experience</h2>
+        <p id="experience-subtitle">Internship and training highlights that shaped my engineering mindset</p>
+    </div>
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="experience-card h-100">
+                    <div class="experience-head">
+                        <h3 id="exp-1-role">Software Engineering Intern</h3>
+                        <span id="exp-1-time">May 2025 - Aug 2025</span>
+                    </div>
+                    <h4 id="exp-1-company">Mynavi Vietnam</h4>
+                    <p id="exp-1-desc">Worked in a product-oriented environment, collaborated with mentors, and improved practical delivery skills across backend and mobile workflows.</p>
+                    <div class="experience-tags">
+                        <span id="exp-1-tag-1">Internship</span>
+                        <span id="exp-1-tag-2">Team Collaboration</span>
+                        <span id="exp-1-tag-3">Delivery Mindset</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="experience-card h-100">
+                    <div class="experience-head">
+                        <h3 id="exp-2-role">Bridge SE Trainee</h3>
+                        <span id="exp-2-time">Sep 2023</span>
+                    </div>
+                    <h4 id="exp-2-company">Nix Vietnam-Japan Bridge Engineer Program</h4>
+                    <p id="exp-2-desc">Trained in cross-cultural communication and engineering workflow standards to align development quality in international teams.</p>
+                    <div class="experience-tags">
+                        <span id="exp-2-tag-1">Bridge SE</span>
+                        <span id="exp-2-tag-2">Communication</span>
+                        <span id="exp-2-tag-3">Global Workflow</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -376,7 +425,7 @@
     <div class="container">
 
         <div id="project-kickback-escape" class="row project-item align-items-center" data-aos="fade-up">
-            <div class="col-lg-7 project-img">
+            <div class="project-img">
                 <div class="img-wrapper hover-video-wrapper">
                     <img src="/assets/img/kickbackescape.png" class="img-fluid" alt="Kickback Escape">
                     <video class="project-hover-video" muted loop playsinline preload="metadata" poster="/assets/img/kickbackescape.png">
@@ -384,7 +433,7 @@
                     </video>
                 </div>
             </div>
-            <div class="col-lg-5 project-content">
+            <div class="project-description">
                 <h3>Kickback Escape</h3>
                 <span class="tech-stack">Unity &bull; C# &bull; RPG</span>
                 <p id="project-1-desc">
@@ -395,16 +444,26 @@
                     <li id="project-1-feature-1"><i class="bi bi-check-circle-fill"></i> Custom Physics-based movement system.</li>
                     <li id="project-1-feature-2"><i class="bi bi-check-circle-fill"></i> Dynamic level design and obstacles.</li>
                 </ul>
+            </div>
+            <div class="project-side">
+                <div class="case-study-snapshot">
+                    <h4 id="case-1-title">Case Study Snapshot</h4>
+                    <ul>
+                        <li id="case-1-problem"><strong>Problem:</strong> Standard platform movement felt too familiar, so the game needed a traversal system that creates challenge and identity without relying on classic jump mechanics.</li>
+                        <li id="case-1-role"><strong>My Role:</strong> Designed the core gameplay loop, implemented recoil-based movement physics, and iterated controls through repeated playtesting to keep movement difficult but fair.</li>
+                        <li id="case-1-tech"><strong>Tech:</strong> Unity, C#, custom force-based controllers, collision tuning, and level scripting focused on movement rhythm and pacing.</li>
+                        <li id="case-1-outcome"><strong>Outcome:</strong> Delivered a distinctive movement identity that made the project memorable and significantly improved the challenge-reward feeling during each level run.</li>
+                    </ul>
+                </div>
                 <div class="project-links">
                     <a id="project-1-btn" href="https://github.com/tienmynguyen/Kickback-Escape" target="_blank" class="btn-visit">
                         <i class="bi bi-github"></i> View Code or Play Demo
                     </a>
                 </div>
-                
             </div>
         </div>
         <div id="project-bang-bang-mi" class="row project-item align-items-center" data-aos="fade-up">
-            <div class="col-lg-7 order-lg-2 project-img">
+            <div class="project-img">
                 <div class="img-wrapper hover-video-wrapper">
                     <img src="/assets/img/gun.png" class="img-fluid" alt="Bang Bang Mi">
                     <video class="project-hover-video" muted loop playsinline preload="metadata" poster="/assets/img/gun.png">
@@ -412,7 +471,7 @@
                     </video>
                 </div>
             </div>
-            <div class="col-lg-5 order-lg-1 project-content">
+            <div class="project-description">
                 <h3>Bang Bang Mi</h3>
                 <span class="tech-stack">Unity &bull; Action &bull; Boss Fight</span>
                 <p id="project-2-desc">
@@ -423,6 +482,17 @@
                     <li id="project-2-feature-1"><i class="bi bi-check-circle-fill"></i> Wave-based enemy spawning system.</li>
                     <li id="project-2-feature-2"><i class="bi bi-check-circle-fill"></i> Skill upgrade & inventory system.</li>
                 </ul>
+            </div>
+            <div class="project-side">
+                <div class="case-study-snapshot">
+                    <h4 id="case-2-title">Case Study Snapshot</h4>
+                    <ul>
+                        <li id="case-2-problem"><strong>Problem:</strong> The game needed a fast combat loop that remains intense over time, while still giving players clear progression and reasons to continue each session.</li>
+                        <li id="case-2-role"><strong>My Role:</strong> Built enemy wave spawning, integrated progression and skill systems, and fine-tuned balancing values for pacing, difficulty spikes, and reward timing.</li>
+                        <li id="case-2-tech"><strong>Tech:</strong> Unity, C#, data-driven wave manager, modular skill components, and configuration tables for rapid balancing iterations.</li>
+                        <li id="case-2-outcome"><strong>Outcome:</strong> Delivered repeatable combat sessions with stronger replay value, clearer progression feedback, and improved player retention potential.</li>
+                    </ul>
+                </div>
                 <div class="project-links">
                     <a id="project-2-btn" href="https://github.com/tienmynguyen/GunGameUnity" target="_blank" class="btn-visit">
                         <i class="bi bi-github"></i> View Code or Play Demo
@@ -431,18 +501,29 @@
             </div>
         </div>
         <div id="project-hivehub" class="row project-item align-items-center" data-aos="fade-up">
-            <div class="col-lg-7 project-img">
+            <div class="project-img">
                 <div class="img-wrapper">
                     <img src="/assets/img/task.png" class="img-fluid" alt="HiveHub">
                 </div>
             </div>
-            <div class="col-lg-5 project-content">
+            <div class="project-description">
                 <h3>HiveHub</h3>
                 <span class="tech-stack">React Native &bull; Firebase &bull; Scrum</span>
                 <p id="project-3-desc">
                     A comprehensive mobile application for project management based on the Scrum framework. 
                     Helps teams track tasks, sprints, and improve productivity.
                 </p>
+            </div>
+            <div class="project-side">
+                <div class="case-study-snapshot">
+                    <h4 id="case-3-title">Case Study Snapshot</h4>
+                    <ul>
+                        <li id="case-3-problem"><strong>Problem:</strong> Teams needed a lightweight mobile tool to monitor Scrum progress in real time without relying on heavy desktop-first project management platforms.</li>
+                        <li id="case-3-role"><strong>My Role:</strong> Implemented core task management flows, sprint tracking features, and Firebase integration while ensuring the UI remained simple for daily team usage.</li>
+                        <li id="case-3-tech"><strong>Tech:</strong> React Native, Firebase Authentication and Firestore, component-based architecture, and reusable state-driven UI patterns.</li>
+                        <li id="case-3-outcome"><strong>Outcome:</strong> Delivered a practical workflow app that improved sprint visibility, reduced update friction, and supported more consistent team communication.</li>
+                    </ul>
+                </div>
                 <div class="project-links">
                     <a id="project-3-btn" href="https://github.com/tienmynguyen/HiveHub" target="_blank" class="btn-visit">
                         <i class="bi bi-github"></i> View Code
@@ -451,7 +532,7 @@
             </div>
         </div>
         <div id="project-obook" class="row project-item align-items-center" data-aos="fade-up">
-            <div class="col-lg-7 order-lg-2 project-img">
+            <div class="project-img">
                 <div class="img-wrapper hover-video-wrapper">
                     <img src="/assets/img/obook.png" class="img-fluid" alt="Obooks">
                     <video class="project-hover-video" muted loop playsinline preload="metadata" poster="/assets/img/obook.png">
@@ -459,13 +540,24 @@
                     </video>
                 </div>
             </div>
-            <div class="col-lg-5 order-lg-1 project-content">
+            <div class="project-description">
                 <h3>Obooks</h3>
                 <span class="tech-stack">PHP &bull; Web App &bull; MySQL</span>
                 <p id="project-4-desc">
                     A web platform for reading lovers. Supports both Audiobooks and E-books. 
                     Features include personal libraries, reading history tracking, and a community forum.
                 </p>
+            </div>
+            <div class="project-side">
+                <div class="case-study-snapshot">
+                    <h4 id="case-4-title">Case Study Snapshot</h4>
+                    <ul>
+                        <li id="case-4-problem"><strong>Problem:</strong> Readers needed a unified platform that supports both e-books and audiobooks, while also providing community features and personalized history.</li>
+                        <li id="case-4-role"><strong>My Role:</strong> Designed backend logic, implemented user-facing reading features, and built database structures for personal libraries, reading history, and forum interactions.</li>
+                        <li id="case-4-tech"><strong>Tech:</strong> PHP, MySQL, modular web architecture, relational schema design, and server-side feature orchestration.</li>
+                        <li id="case-4-outcome"><strong>Outcome:</strong> Delivered an all-in-one reading platform with stronger personalization, better user continuity, and a richer community-driven experience.</li>
+                    </ul>
+                </div>
                 <div class="project-links">
                     <a id="project-4-btn" href="https://github.com/tienmynguyen/obookpromax" target="_blank" class="btn-visit">
                         <i class="bi bi-github"></i> View Code
@@ -474,18 +566,29 @@
             </div>
         </div>
         <div id="project-tego-ai" class="row project-item align-items-center" data-aos="fade-up">
-            <div class="col-lg-7 project-img">
+            <div class="project-img">
                 <div class="img-wrapper">
                     <img src="/assets/img/aaa.png" class="img-fluid" alt="Tego">
                 </div>
             </div>
-            <div class="col-lg-5 project-content">
+            <div class="project-description">
                 <h3>Tego AI</h3>
                 <span class="tech-stack">Python &bull; AI &bull; Computer Vision</span>
                 <p id="project-5-desc">
                     An intelligent application for traffic violation recognition. 
                     Uses machine learning models to detect and analyze traffic signs and violations in real-time.
                 </p>
+            </div>
+            <div class="project-side">
+                <div class="case-study-snapshot">
+                    <h4 id="case-5-title">Case Study Snapshot</h4>
+                    <ul>
+                        <li id="case-5-problem"><strong>Problem:</strong> Manual traffic violation monitoring is slow, expensive, and hard to scale in busy environments where rapid detection is critical.</li>
+                        <li id="case-5-role"><strong>My Role:</strong> Built and integrated the detection pipeline, handled preprocessing and inference flow, and connected outputs for real-time analysis.</li>
+                        <li id="case-5-tech"><strong>Tech:</strong> Python, Computer Vision, machine learning models, and realtime frame processing workflow.</li>
+                        <li id="case-5-outcome"><strong>Outcome:</strong> Delivered a prototype capable of automatically identifying traffic signs and potential violations with faster monitoring feedback.</li>
+                    </ul>
+                </div>
                 <div class="project-links">
                     <a id="project-5-btn" href="https://github.com/tienmynguyen/AIsignlang" target="_blank" class="btn-visit">
                         <i class="bi bi-github"></i> View Code
