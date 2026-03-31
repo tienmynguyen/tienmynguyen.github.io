@@ -145,6 +145,24 @@
   });
 
   /**
+   * Project hover video preview
+   */
+  document.querySelectorAll('.hover-video-wrapper').forEach((wrapper) => {
+    const previewVideo = wrapper.querySelector('.project-hover-video');
+    if (!previewVideo) return;
+
+    wrapper.addEventListener('mouseenter', () => {
+      previewVideo.currentTime = 0;
+      previewVideo.play().catch(() => {});
+    });
+
+    wrapper.addEventListener('mouseleave', () => {
+      previewVideo.pause();
+      previewVideo.currentTime = 0;
+    });
+  });
+
+  /**
    * Initiate glightbox
    */
   const glightbox = GLightbox({

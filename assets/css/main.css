@@ -1019,6 +1019,25 @@ section, .section {
     transition: transform 0.5s ease;
 }
 
+.project-img .project-hover-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    pointer-events: none;
+}
+
+.project-img .hover-video-wrapper:hover .project-hover-video {
+    opacity: 1;
+}
+
+.project-img .hover-video-wrapper:hover img {
+    opacity: 0;
+}
+
 .project-item:hover .project-img img {
     transform: scale(1.05); /* Zoom nhẹ ảnh khi hover vào khung */
 }
